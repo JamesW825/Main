@@ -6,6 +6,7 @@ Options=[["A-Arctic", "B-Indian", "C-Pacific", "D-Atlantic"],["A-330/500", "B-77
 #        1.   2.   3.   4.   5.   6.   7.   8.   9.   10.
 Answer=["C", "B", "D", "A", "C", "B"]#, "", "", "", ""]
 Answers=["1. C-Pacific", "2. B-770/1200", "3. D-Britain", "4. A-Cheetah", "5. C-Prague", "6. B-60"]#, "7. ", "8. ", "9. ", "10. "]
+import time
 ##################################################################################################################################
 def MQuiz_Game():
     score = 0
@@ -24,13 +25,16 @@ def MQuiz_Game():
         #     UserAnswer.upper() != "A" or "B" or "C" or "D"
         #     print("Answer is invalid!")
         if UserAnswer.upper() == Answer[nAnswer]: # Converts users answer into upper case to save another array (of lower case numbers) and ultimately make it easier.
+            time.sleep(0.5)
             print("Correct!")
             score = score+1 # Increments users score by 1 when answer is correct.
         else:
+            time.sleep(0.5)
             print("Incorrect!")
         nAnswer = nAnswer+4 # This updates the answer for the next question.
         #if len(Questions)>n:
         print("Next question is:") # Ignore on last loop.
+        time.sleep(0.5)
     print("You got", score, "out of", +len(Questions)) # Prints the end score that was achieved.
     print("This is all of the answers: ", Answers)
     return question, score, nAnswer # Returns the values of these varibles for next use of function.
