@@ -9,11 +9,10 @@ f.close()
 # Finding the total amount
 Total=0
 Myfile='AlexEnteries.txt'
-f=open("AlexEnteries.txt", "r+")
+f=open("AlexEnteries.txt", "r")
 with open(Myfile) as f:
     for n in f:
         #n=n.split()
         Total=Total+int(n)
-#f.write(Total)
 print("Current total:",Total)
 f.close()
