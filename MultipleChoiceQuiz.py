@@ -17,7 +17,7 @@ def MQuiz_Game():
         print("Your options are:")
         print(Options)
         print()
-        UserAnswer=input("Type in the letter of your answer for this question. (A, B, C or D)")
+        UserAnswer=input("Type in the letter of your answer for this question. (A, B, C or D) \n")
         print()
         if len(UserAnswer) > 1 or len(UserAnswer) < 1: # Check to see if answer is valid.
             print("Answer is invalid!")
