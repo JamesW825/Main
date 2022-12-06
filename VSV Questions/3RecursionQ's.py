@@ -4,8 +4,13 @@
 
 # 1.
 def SumNum(n):
-
-
-
+  if n == 0:
+    return 0
+  else:
+    return n + SumNum(n-2)
+# Main
 n=int(input("Enter any even number: \n"))
 SumNum(n)
+
+# 2.
+def 
