@@ -10,7 +10,7 @@ def SumNum(n):
     return n + SumNum(n-2)
 # Main
 n=int(input("Enter any even number: \n"))
-SumNum(n)
+#SumNum(n)
 
 # 2.
 def FibWORec():
@@ -23,6 +23,28 @@ def FibWORec():
     b=c
     print(c,end=" ")
     x=x-1
- 
+
+
 # 3.
-def FibWRec():
+#def FibWRec():
+
+
+# Extra: Worksheet 5 - Recursion Task 2
+# Calculate and print the sequence of n Fibonacci numbers, where n is between 3 and 30.
+import time
+# a)
+def fib(n):
+  if n <= 1:
+    return n
+  else:
+    return fib(n-1) + fib(n-2)
+
+def fibonacci2(n):
+    fibNumbers = [0,1]  #list of first two Fibonacci numbers
+	# now append the sum of the two previous numbers to the list    
+    for i = 2 to n:
+        fibNumbers.append(fibNumbers[i-1] + fibNumbers[i-2])
+	      next i
+	return fibNumbers[n] 
+
+
